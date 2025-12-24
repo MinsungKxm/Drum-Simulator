@@ -52,6 +52,8 @@ function play_correctly(button){
 
 function buttonAnimation(currentKey){
   var activeButton = document.querySelector("." + currentKey);
-  activeButton.setAttribute("class", activeButton.innerHTML + " drum pressed");
-  
+  activeButton.classList.add("pressed");
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+  }, 100)
 }
